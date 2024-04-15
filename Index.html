@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards dos Pokémons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="pokemon-card" v-for="pokemon in pokemons" :key="pokemon.id" :class="typeClass(pokemon)">
+            <img :src="pokemon.image" :alt="pokemon.name" class="pokemon-image">
+            <h2 class="pokemon-name">{{ pokemon.name }}</h2>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js"></script>
+</body>
+</html>
